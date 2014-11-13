@@ -59,7 +59,7 @@ module.exports = function (grunt) {
             },
             frameworks: ['jasmine'],
             files: ['src/lib/**/*.js', 'src/js/**/*.js', 'test/lib/**/*.js', 'test/js/**/*.test.js'],
-            reporters: ['progress', 'coverage', 'junit'],
+            reporters: ['dots', 'coverage', 'junit'],
             coverageReporter: {
                 reporters: [
                     {type: 'lcov'},
@@ -75,7 +75,7 @@ module.exports = function (grunt) {
         },
         phantomjs: {
             browsers: ['PhantomJS'],
-            singleRun: true
+            singleRun: false
         },
         firefox: {
             browsers: ['Firefox'],
